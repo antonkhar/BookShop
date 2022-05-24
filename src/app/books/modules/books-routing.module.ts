@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BooksRoutingModule } from './books/modules/books-routing.module';
+import { BookListComponent } from '../components/book-list/book-list.component';
 
 const routes: Routes = [
-  { path: 'books', component: BooksRoutingModule}
+  {path:'/', component: BookListComponent}
 ];
-
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class BooksRoutingModule { }

@@ -1,0 +1,62 @@
+.box{
+    display: flex;
+    margin: 5px;
+}
+
+.parrent{
+    margin: 5px;
+}
+
+img{
+    height: 175px;
+    width: 150px;
+    margin-right: 25px;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    display: inline;
+}
+
+input{
+    margin-left: 5px;
+}
+
+button{
+    margin: 10px;
+}
+
+.desc{
+    display: flex;
+    margin: 0px;
+    background-color: aquamarine;
+}
+
+.info{
+    margin-right: 30px;
+}
+
+.books{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    padding: 10px;
+    margin: 10px 20px 10px 20px;
+    background-color: red;
+}
+
+.button_edit{
+    height: 25px;
+}
