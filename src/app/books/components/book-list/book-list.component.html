@@ -25,14 +25,14 @@
 <h2>My Books</h2>
 <div class="box">
     <button routerLink="/forms" class="button_add">Add book</button >
-    <button routerLink="/card" class="button_card">Card</button >
+    <button routerLink="/cart" class="button_card">Card</button >
 </div>
 <div class="books">
-  <div *ngFor="let book of books">
+  <div *ngFor="let book of BOOKS">
       <div class="cards">
-        <div class="card">
+        <div class="card" [routerLink]="[book.id]">
             <div class="img">
-                <img src={{book.img}} alt="альтернативный текст">
+                <img [src]=book.img alt="альтернативный текст">
             </div>
             <div class="desc">
                 <div class="info">
@@ -41,8 +41,12 @@
                     <p class="year">{{book.yearIssue.getFullYear()}} </p>
                     <p class="description">{{book.description}} </p>
                     <div>
-                        <button type="button" class="button_edit" (click)="onDelite()">Delite</button>
-                        <button routerLink="/book/{{book.id}} " class="button_edit">Edit</button >
+                        <button type="button" 
+                                class="button_edit" 
+                                (click)="onDelite()">
+                                Delite
+                        </button>
+                        
                     </div>
                 </div>
             </div>

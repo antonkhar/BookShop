@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IBook } from '../../interfaces/book.interfaces';
 import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { EditorService } from '../../services/editor.service';
 
 @Component({
   selector: 'app-book-detail',
@@ -28,12 +30,20 @@ export class BookDetailComponent implements OnInit {
     img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg'
   }]
 
-  constructor(private location: Location) {
+  constructor(
+    private location: Location,
+    private route: ActivatedRoute,
+    private editorService: EditorService,) {
 
    }
 
-  ngOnInit(): void {
-
+   ngOnInit(): void {
+    this.getHero();
+  }
+  
+  getHero(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.editBook = this.editorService.getBook(id)
   }
 
   goBack(): void {

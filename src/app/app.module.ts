@@ -3,24 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BooksModule } from './books/modules/books.module';
-import { BookDetailComponent } from './books/components/book-detail/book-detail.component';
 import { FormsModule } from '@angular/forms';
-import { FormComponent } from './forms/components/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from './cart/components/card/card.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookDetailComponent,
-    FormComponent,
-    CardComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule,
+    ReactiveFormsModule,
     AppRoutingModule,
-    BooksModule
   ],
   providers: [],
   bootstrap: [AppComponent]
