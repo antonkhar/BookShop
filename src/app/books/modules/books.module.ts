@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BookListComponent } from '../components/book-list/book-list.component';
-import { FormsModule } from '@angular/forms';
-
+import { EditorService } from '../services/editor.service';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
 @NgModule({
@@ -11,10 +11,11 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    AppRoutingModule
   ],
   exports: [
     BookListComponent
-  ]
+  ],
+  providers: [EditorService]
 })
 export class BooksModule { }

@@ -23,6 +23,10 @@
 </div> -->
 
 <h2>My Books</h2>
+<div class="box">
+    <button routerLink="/forms" class="button_add">Add book</button >
+    <button routerLink="/card" class="button_card">Card</button >
+</div>
 <div class="books">
   <div *ngFor="let book of books">
       <div class="cards">
@@ -36,8 +40,11 @@
                     <p class="author">{{book.author}} </p>
                     <p class="year">{{book.yearIssue.getFullYear()}} </p>
                     <p class="description">{{book.description}} </p>
+                    <div>
+                        <button type="button" class="button_edit" (click)="onDelite()">Delite</button>
+                        <button routerLink="/book/{{book.id}} " class="button_edit">Edit</button >
+                    </div>
                 </div>
-                <button type="button" class="button_edit" (click)="onEdit(book)">Edit</button>
             </div>
         </div>
       </div>

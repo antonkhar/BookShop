@@ -1,12 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { IBook } from 'src/app/books/interfaces/book.interfaces';
+import { EventEmitter } from '@angular/core';
+import { EditorService } from '../../services/editor.service';
 
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.css']
 })
+
 export class BookListComponent implements OnInit {
+
+  selectedBook?: IBook
 
   books: IBook[] = [
     {
@@ -59,15 +64,17 @@ export class BookListComponent implements OnInit {
     }
   ]
 
-  selectedBook?: IBook
+  constructor() { }
 
   onEdit(book: IBook){
-    this.selectedBook = book
   }
 
-  constructor() { }
+  onDelite(){
+  }
 
   ngOnInit(): void {
   }
+
+
 
 }
