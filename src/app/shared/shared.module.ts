@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormComponent } from './components/form/form.component';
 import { SharedRoutingModule } from './shared-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -11,7 +12,11 @@ import { SharedRoutingModule } from './shared-routing.module';
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    FormsModule,
+    SharedRoutingModule,
+  ],
+  exports: [
+    FormComponent
   ]
 })
 export class SharedModule { }

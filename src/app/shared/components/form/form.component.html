@@ -1,1 +1,9 @@
-<p>form works!</p>
+
+<h2>Book name: </h2>
+<input id="name" [(ngModel)]="this.book.name" placeholder={{this.book.name}}>
+<h2>Book description:</h2>
+<input id="desc" [(ngModel)]="this.book.description" placeholder={{this.book.description}}>
+<div class="buttons">
+    <button type="button" class="button"(click)="toSave()">Save</button>
+    <button type="button" class="button"(click)="goBack()">Go back</button>
+</div>

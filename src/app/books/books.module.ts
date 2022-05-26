@@ -5,18 +5,22 @@ import { EditorService } from './services/editor.service';
 import { BookDetailComponent } from './components/book-detail/book-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BooksRoutingModule } from './books-routing.module';
+import { SharedModule } from '../shared/shared.module';
+import { AddBookComponent } from './components/add-book/add-book.component';
 
 
 @NgModule({
   declarations: [
     BookListComponent,
     BookDetailComponent,
+    AddBookComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     BooksRoutingModule,
+    SharedModule
   ],
   exports: [],
   providers: [EditorService]

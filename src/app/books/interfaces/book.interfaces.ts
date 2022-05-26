@@ -6,5 +6,6 @@ export interface IBook {
     description: string,
     author: string,
     yearIssue: Date,
-    img: string
+    img: string,
+    price: number
 }

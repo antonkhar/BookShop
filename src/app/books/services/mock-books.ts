@@ -7,7 +7,8 @@ export const books: IBook[] = [
       description: 'description',
       author: 'author',
       yearIssue: new Date('1995-12-17'),
-      img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg'
+      img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg',
+      price: 1000
     },
     {
       id: 2,
@@ -15,7 +16,8 @@ export const books: IBook[] = [
       description: 'description',
       author: 'author',
       yearIssue: new Date('1995-12-17'),
-      img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg'
+      img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg',
+      price: 1000
     },
     {
       id: 3,
@@ -23,7 +25,8 @@ export const books: IBook[] = [
       description: 'description',
       author: 'author',
       yearIssue: new Date('1995-12-17'),
-      img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg'
+      img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg',
+      price: 1000
     },
     {
       id: 4,
@@ -31,7 +34,8 @@ export const books: IBook[] = [
       description: 'description',
       author: 'author',
       yearIssue: new Date('1995-12-17'),
-      img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg'
+      img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg',
+      price: 1000
     },
     {
       id: 5,
@@ -39,7 +43,8 @@ export const books: IBook[] = [
       description: 'description',
       author: 'author',
       yearIssue: new Date('1995-12-17'),
-      img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg'
+      img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg',
+      price: 1000
     },
     {
       id: 6,
@@ -47,6 +52,7 @@ export const books: IBook[] = [
       description: 'description',
       author: 'author',
       yearIssue: new Date('1995-12-17'),
-      img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg'
+      img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg',
+      price: 1000
     }
   ]
