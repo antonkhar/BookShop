@@ -8,6 +8,7 @@ import { books } from './mock-books';
 export class EditorService {
 
   BOOKS: IBook[] = books;
+  CART: IBook[] = [];
 
   getBook(id: number){
     return this.BOOKS.find(h => h.id === id)

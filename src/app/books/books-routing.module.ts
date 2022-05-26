@@ -9,7 +9,8 @@ const routes: Routes = [
   {
     path:'',
     component: BookListComponent,
-  },  {
+  },
+  {
     path: 'add',
     component: AddBookComponent
   },

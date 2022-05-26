@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormComponent } from './components/form/form.component';
-import { SharedRoutingModule } from './shared-routing.module';
 import { FormsModule } from '@angular/forms';
 
 
@@ -12,8 +11,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    SharedRoutingModule,
+    FormsModule
   ],
   exports: [
     FormComponent

@@ -1,4 +1,10 @@
 .books{
     display: flex;
     flex-wrap: wrap;
+    background-color: red;
+}
+
+.book{
+    background-color: aqua;
+    margin: 10px;
 }

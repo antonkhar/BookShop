@@ -10,13 +10,14 @@ import { Location } from '@angular/common';
 })
 export class AddBookComponent implements OnInit {
 
-  @Input() id? : number;
-  @Input() bookName?: string;
-  @Input() bookDescription?: string;
-  @Input() bookAuthor?: string;
-  @Input() bookYearIssue?: Date;
-  @Input() bookImg?: string;
-  @Input() bookPrice?:  number;
+  // @Input() id? : number;
+  // @Input() bookName?: string;
+  // @Input() bookDescription?: string;
+  // @Input() bookAuthor?: string;
+  // @Input() bookYearIssue?: Date;
+  // @Input() bookImg?: string;
+  // @Input() bookPrice?:  number;
+  
   constructor(private editorService: EditorService, private location: Location) { }
 
   ngOnInit(): void {

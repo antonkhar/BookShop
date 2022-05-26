@@ -12,21 +12,15 @@ export class CardComponent implements OnInit {
 
   Cart: IBook[] = [];
 
-  @Input() addBook?: IBook
-
   constructor(
-    private location: Location,
-    private route: ActivatedRoute,
-    private editorService: AddBooksService,) { }
+    private addBookService: AddBooksService
+  ) { }
 
   ngOnInit(): void {
+    this.addBookToCart();
   }
 
-  addBookToCart(book: IBook){
-    this.Cart.push(book);
-  }
+  addBookToCart(){
 
-  getBook(): void {
-  }
-
-}
+  } 
+}1

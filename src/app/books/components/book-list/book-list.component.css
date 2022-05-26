@@ -60,3 +60,8 @@ button{
 .button_edit{
     height: 25px;
 }
+
+.buttons{
+    max-width: 70px;
+    display: block;
+}

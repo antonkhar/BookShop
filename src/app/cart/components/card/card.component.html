@@ -1,15 +1,17 @@
-<p>card works!</p>
+<h2>You cart</h2>
 
 <div>
     <div *ngFor="let book of Cart">
         <div class="books">
-            <img [src]=book.img>
-            <div class="info">
-                <h3>{{addBook!.name}}</h3>
-                <p>{{addBook!.author}}</p>
-                <p>{{addBook!.description}}</p>
+            <div class="book">
+                <img [src]=book.img>
+                <div class="info">
+                    <h3>{{book.name}}</h3>
+                    <p>{{book.author}}</p>
+                    <p>{{book.description}}</p>
+                </div>
+                {{book.price}}
             </div>
-            {{book.price}}
         </div>
     </div>
 </div>

@@ -31,11 +31,18 @@
     <div *ngFor="let book of BOOKS;">
         <div class="cards">
         <div class="card">
-            <button type="button" 
-                class="button_edit" 
-                (click)="onDelite(book.id)">
-                Delite
-            </button> 
+            <div class="buttons">
+                <button type="button" 
+                    class="button_edit" 
+                    (click)="onDelite(book.id)">
+                    Delite
+                </button> 
+                <button type="button" 
+                    class="button_edit" 
+                    (click)="onBuy(book)">
+                    Buy
+                </button>
+            </div>
             <div class="img">
                 <img [src]=book.img alt="альтернативный текст">
             </div>

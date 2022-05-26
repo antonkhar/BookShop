@@ -22,7 +22,6 @@ import { AddBookComponent } from './components/add-book/add-book.component';
     BooksRoutingModule,
     SharedModule
   ],
-  exports: [],
-  providers: [EditorService]
+
 })
 export class BooksModule { }

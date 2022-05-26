@@ -1,7 +1,8 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { IBook } from 'src/app/books/interfaces/book.interfaces';
-import { EditorService } from '../../services/editor.service';
 import { books } from '../../services/mock-books';
+import { AddBooksService } from 'src/app/cart/services/add-books.service';
+import { EditorService } from '../../services/editor.service';
 
 @Component({
   selector: 'app-book-list',
@@ -11,11 +12,13 @@ import { books } from '../../services/mock-books';
 
 export class BookListComponent implements OnInit {
 
+  @Output() addCard = new EventEmitter
+
   selectedBook?: IBook
 
   BOOKS: IBook[] = books
 
-  constructor(private editService: EditorService) { }
+  constructor(private editService: EditorService, private cartService: AddBooksService) { }
 
   onEdit(book: IBook){
   }
@@ -29,6 +32,10 @@ export class BookListComponent implements OnInit {
 
   getBook(id:number){
     this.editService.getBook(id)
+  }
+
+  onBuy(book: IBook){
+    this.cartService.pushCart(book);
   }
 
 
