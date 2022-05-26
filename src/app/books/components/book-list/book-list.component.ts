@@ -1,6 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { IBook } from 'src/app/books/interfaces/book.interfaces';
-import { EventEmitter } from '@angular/core';
 import { EditorService } from '../../services/editor.service';
 import { books } from '../../services/mock-books';
 
@@ -21,7 +20,8 @@ export class BookListComponent implements OnInit {
   onEdit(book: IBook){
   }
 
-  onDelite(){
+  onDelite(id: number){
+    //this.BOOKS.splice(id-1, 1)
   }
 
   ngOnInit(): void {

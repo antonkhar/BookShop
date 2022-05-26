@@ -13,23 +13,6 @@ export class BookDetailComponent implements OnInit {
 
   @Input() editBook?: IBook
 
-  books: IBook[] = [{
-    id: 1,
-    name: 'book1',
-    description: 'desc',
-    author: 'author',
-    yearIssue: new Date(),
-    img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg'
-  },
-  {
-    id: 2,
-    name: 'book2',
-    description: 'desc',
-    author: 'author',
-    yearIssue: new Date(),
-    img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg'
-  }]
-
   constructor(
     private location: Location,
     private route: ActivatedRoute,
@@ -37,11 +20,11 @@ export class BookDetailComponent implements OnInit {
 
    }
 
-   ngOnInit(): void {
-    this.getHero();
+  ngOnInit(): void {
+    this.getBook();
   }
   
-  getHero(): void {
+  getBook(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.editBook = this.editorService.getBook(id)
   }
@@ -52,5 +35,11 @@ export class BookDetailComponent implements OnInit {
 
   toSave(): void {
     this.goBack();
+  }
+
+  revriteBook(book: IBook)
+  {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.editorService.getBookRevrite(book, id)
   }
 }
