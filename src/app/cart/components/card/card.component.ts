@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { IBook } from 'src/app/books/interfaces/book.interfaces';
 import { AddBooksService } from '../../services/add-books.service';
 
@@ -10,17 +9,17 @@ import { AddBooksService } from '../../services/add-books.service';
 })
 export class CardComponent implements OnInit {
 
-  Cart: IBook[] = [];
+  public cart: IBook[] = [];
 
-  constructor(
-    private addBookService: AddBooksService
-  ) { }
+  constructor(private _cartService: AddBooksService) { }
 
   ngOnInit(): void {
-    this.addBookToCart();
+    this.cart = this._cartService._CART;
   }
 
-  addBookToCart(){
+  public onDelite(id: number): void{
+    this._cartService.remove(id);
+  }
 
-  } 
-}1
+
+}

@@ -1,4 +1,4 @@
-import { Injectable, Input } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { IBook } from '../interfaces/book.interfaces';
 import { books } from './mock-books';
 
@@ -8,13 +8,12 @@ import { books } from './mock-books';
 export class EditorService {
 
   BOOKS: IBook[] = books;
-  CART: IBook[] = [];
 
   getBook(id: number){
     return this.BOOKS.find(h => h.id === id)
   }
 
-  getBookRevrite(book: IBook, id: number){ 
+  revriteBook(book: IBook, id: number){ 
     this.BOOKS.find(h => h.id === id)!.name = book.name;
     this.BOOKS.find(h => h.id === id)!.description = book.description;
     this.BOOKS.find(h => h.id === id)!.author = book.author;
@@ -23,7 +22,7 @@ export class EditorService {
     this.BOOKS.find(h => h.id === id)!.price = book.price;
   }
 
-  getNewBook(book: IBook){
+  pushBook(book: IBook){
     this.BOOKS.push(book)
   }
 

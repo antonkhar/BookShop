@@ -6,14 +6,15 @@ import { IBook } from 'src/app/books/interfaces/book.interfaces';
 })
 export class AddBooksService {
 
-  CART: IBook[] = [];
+   _CART: IBook[] = [];
 
-  getAddedBook(id: number){
+  add(book: IBook){
+    this._CART.push(book);
   }
 
-  pushCart(book: IBook){
-    this.CART.push(book);
-    console.log(this.CART)
+  public remove(id: number): void {
+    const el = this._CART.findIndex(h => h.id === id);
+    this._CART.splice(el, 1) 
   }
 
   constructor() { }

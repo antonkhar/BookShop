@@ -14,29 +14,29 @@ export class BookListComponent implements OnInit {
 
   @Output() addCard = new EventEmitter
 
-  selectedBook?: IBook
+  public BOOKS: IBook[] = books
 
-  BOOKS: IBook[] = books
-
-  constructor(private editService: EditorService, private cartService: AddBooksService) { }
-
-  onEdit(book: IBook){
-  }
-
-  onDelite(id: number){
-    //this.BOOKS.splice(id-1, 1)
-  }
+  constructor(
+    private _editService: EditorService,
+    private _cartService: AddBooksService,
+  ) { }
 
   ngOnInit(): void {
+    
   }
 
-  getBook(id:number){
-    this.editService.getBook(id)
+  public onDelete(id: number): void{
+    const el = this.BOOKS.findIndex(h => h.id === id);
+    this.BOOKS.splice(el, 1) 
   }
 
-  onBuy(book: IBook){
-    this.cartService.pushCart(book);
+  public getBook(id:number): void{
+    this._editService.getBook(id)
   }
 
+  public onBuy(book: IBook): void{
+    this._cartService.add(book);
+    alert( "Book " + book.name + " added to cart" );
+  }
 
 }

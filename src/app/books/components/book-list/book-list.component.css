@@ -1,16 +1,12 @@
-.box{
-    display: flex;
-    margin: 5px;
-}
-
-.parrent{
-    margin: 5px;
-}
-
 img{
-    height: 175px;
-    width: 150px;
-    margin-right: 25px;
+    height: 200px;
+    width: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a{
+    margin: 10px;
 }
 
 ul{
@@ -27,6 +23,15 @@ input{
 
 button{
     margin: 10px;
+}
+
+.box{
+    display: flex;
+    margin: 5px;
+}
+
+.parrent{
+    margin: 5px;
 }
 
 .desc{
@@ -51,17 +56,5 @@ button{
 }
 
 .card{
-    display: flex;
-    padding: 10px;
-    margin: 10px 20px 10px 20px;
-    background-color: red;
-}
-
-.button_edit{
-    height: 25px;
-}
-
-.buttons{
-    max-width: 70px;
-    display: block;
+    margin: 0px 30px 30px 30px;
 }

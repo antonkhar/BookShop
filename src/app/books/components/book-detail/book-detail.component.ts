@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IBook } from '../../interfaces/book.interfaces';
-import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { EditorService } from '../../services/editor.service';
 
@@ -14,32 +13,22 @@ export class BookDetailComponent implements OnInit {
   @Input() editBook?: IBook
 
   constructor(
-    private location: Location,
-    private route: ActivatedRoute,
-    private editorService: EditorService,) {
+    private _route: ActivatedRoute,
+    private _editorService: EditorService,) {
 
    }
 
   ngOnInit(): void {
     this.getBook();
   }
+
+  public revriteBook(book: IBook): void {
+    const id = Number(this._route.snapshot.paramMap.get('id'));
+    this._editorService.revriteBook(book, id)
+  }
   
-  getBook(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.editBook = this.editorService.getBook(id)
-  }
-
-  goBack(): void {
-    this.location.back();
-  }
-
-  toSave(): void {
-    this.goBack();
-  }
-
-  revriteBook(book: IBook)
-  {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.editorService.getBookRevrite(book, id)
+  public getBook(): void {
+    const id = Number(this._route.snapshot.paramMap.get('id'));
+    this.editBook = this._editorService.getBook(id)
   }
 }

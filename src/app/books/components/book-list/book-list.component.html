@@ -1,50 +1,28 @@
-<!-- <div class="box"><h2>Book: {{books[0].name}}</h2></div>
-<div class="box">
-    <div class="parrent"><h3>Author: {{books[0].author}} </h3></div>
-    <div class="parrent"><h3>Year of issue: {{books[0].yearIssue.getFullYear()}}</h3></div>
-</div>
-<div class="box"><p>Description: {{books[0].description}}</p></div>
+<h2>Books</h2>
 
 <div class="box">
-    <label for="name">Book name: </label>
-    <input id="name" [(ngModel)]="books[0].name" placeholder="name">
-</div>
-
-<div class="box">
-    <div>
-        <label for="name">Author name: </label>
-        <input id="name" [(ngModel)]="books[0].author" placeholder="name">
-    </div>
-</div>
-
-<div class="box">
-    <label for="name">Description: </label>
-    <input id="name" [(ngModel)]="books[0].description" placeholder="name">
-</div> -->
-
-<h2>My Books</h2>
-<div class="box">
-    <button routerLink="add" class="button_add">Add book</button >
-    <button routerLink="cart" class="button_card">Card</button >
+    <a routerLink="add" class="button_add">
+        <button>Add</button>
+    </a >
 </div>
 <div class="books">
     <div *ngFor="let book of BOOKS;">
         <div class="cards">
         <div class="card">
+            <div class="img">
+                <img [src]=book.img alt="альтернативный текст">
+            </div>
             <div class="buttons">
                 <button type="button" 
-                    class="button_edit" 
-                    (click)="onDelite(book.id)">
-                    Delite
+                    class="button" 
+                    (click)="onDelete(book.id)">
+                    Delete
                 </button> 
                 <button type="button" 
-                    class="button_edit" 
+                    class="button" 
                     (click)="onBuy(book)">
                     Buy
                 </button>
-            </div>
-            <div class="img">
-                <img [src]=book.img alt="альтернативный текст">
             </div>
             <div class="desc" [routerLink]="[book.id]">
                 <div class="info">

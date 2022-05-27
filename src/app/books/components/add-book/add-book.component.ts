@@ -1,7 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IBook } from '../../interfaces/book.interfaces';
 import { EditorService } from '../../services/editor.service';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-book',
@@ -9,22 +8,13 @@ import { Location } from '@angular/common';
   styleUrls: ['./add-book.component.css']
 })
 export class AddBookComponent implements OnInit {
-
-  // @Input() id? : number;
-  // @Input() bookName?: string;
-  // @Input() bookDescription?: string;
-  // @Input() bookAuthor?: string;
-  // @Input() bookYearIssue?: Date;
-  // @Input() bookImg?: string;
-  // @Input() bookPrice?:  number;
   
-  constructor(private editorService: EditorService, private location: Location) { }
+  constructor(private _editorService: EditorService) { }
 
   ngOnInit(): void {
   }
 
-  addBook(book: IBook){
-    this.editorService.getNewBook(book);
-    this.location.back();
+  public addBook(book: IBook): void{
+    this._editorService.pushBook(book);
   }
 }

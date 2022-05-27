@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IBook } from 'src/app/books/interfaces/book.interfaces';
 import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -9,7 +10,7 @@ import { Location } from '@angular/common';
 })
 export class FormComponent implements OnInit {
 
-  book: IBook = {
+  public book: IBook = {
     id: 5,
     name: 'name',
     description: 'description',
@@ -18,22 +19,22 @@ export class FormComponent implements OnInit {
     img: 'https://www.respublica.ru/uploads/00/00/00/dw/t4/467ecb1e5fa4f425.jpg',
     price: 1000
   }
-  name: string = 'name';
-  description: string = 'description';
 
-  constructor(private location: Location) { }
+  constructor(
+    private _router: Router
+  ) { }
 
   @Output() Saving = new EventEmitter()
 
   ngOnInit(): void {
   }
 
-  toSave(){
+  public toSave(): void {
     this.Saving.emit(this.book);
     this.goBack();
   }
 
-  goBack(){
-    this.location.back();
+  public goBack(): void {
+    this._router.navigateByUrl('/books').then();
   }
 }

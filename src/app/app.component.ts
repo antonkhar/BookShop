@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { IBook } from './books/interfaces/book.interfaces';
 
 @Component({
@@ -7,8 +8,18 @@ import { IBook } from './books/interfaces/book.interfaces';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  constructor(
+    private _router : Router
+  ){}
+
   title = 'BookShop';
-  bookAdd(book:  IBook){
-  console.log('ok')
+
+  public openCart(): void {
+    this._router.navigateByUrl('cart');
+  }
+
+  public openBooks(): void {
+    this._router.navigateByUrl('books');
   }
 }

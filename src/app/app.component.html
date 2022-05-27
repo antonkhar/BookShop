@@ -1,2 +1,8 @@
-<h1>{{ title }}</h1>
+<div class="box">
+    <h1>{{ title }}</h1>
+    <div class="buttons">
+        <button (click)="openBooks()">Books</button>
+        <button (click)="openCart()">Cart</button>
+    </div>
+</div>
 <router-outlet></router-outlet>

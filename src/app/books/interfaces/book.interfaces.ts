@@ -1,5 +1,3 @@
-import { Data } from "@angular/router";
-
 export interface IBook {
     id: number,
     name: string,
