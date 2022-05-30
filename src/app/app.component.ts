@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { IBook } from './books/interfaces/book.interfaces';
+import { IBook } from './books/interfaces/book.interface';
 
 @Component({
   selector: 'app-root',
@@ -21,5 +21,9 @@ export class AppComponent {
 
   public openBooks(): void {
     this._router.navigateByUrl('books');
+  }
+
+  public openUsers(): void {
+    this._router.navigateByUrl('users');
   }
 }

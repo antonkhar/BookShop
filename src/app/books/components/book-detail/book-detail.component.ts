@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IBook } from '../../interfaces/book.interfaces';
+import { IBook } from '../../interfaces/book.interface';
 import { ActivatedRoute } from '@angular/router';
 import { EditorService } from '../../services/editor.service';
 

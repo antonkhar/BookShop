@@ -2,7 +2,7 @@
 
 <div class="box">
     <a routerLink="add" class="button_add">
-        <button>Add</button>
+        <button class="btn btn-outline-warning">Add</button>
     </a >
 </div>
 <div class="books">
@@ -10,16 +10,16 @@
         <div class="cards">
         <div class="card">
             <div class="img">
-                <img [src]=book.img alt="альтернативный текст">
+                <img [src]=book.img alt="">
             </div>
             <div class="buttons">
                 <button type="button" 
-                    class="button" 
+                    class="button btn btn-outline-danger" 
                     (click)="onDelete(book.id)">
                     Delete
                 </button> 
                 <button type="button" 
-                    class="button" 
+                    class="button btn btn-outline-success" 
                     (click)="onBuy(book)">
                     Buy
                 </button>

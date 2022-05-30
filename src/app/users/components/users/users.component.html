@@ -1,0 +1,33 @@
+<p>users works!</p>
+
+<div class="users">
+    <button type="button" routerLink="add" class="btn btn-warning">Add user</button>
+    <div *ngFor="let user of USERS;">
+        <div class="cards">
+        <div class="card" style="display: flex;">
+            <div class="mycard">
+                <div class="img">
+                    <img src={{user.photo}} class="img-fluid" alt="">
+                </div>
+                <div class="desc" [routerLink]="[user.id]">
+                    <div class="info mycard">
+                        <div class="box">
+                            <p class="first name">First name: {{user.firstName}} </p>
+                            <p class="last name">Last name: {{user.lastName}} </p>
+                            <p class="patronymic">Patronymic: {{user.patronymic}} </p>
+                            <p class="date of birth">Date of birth: {{user.dateOfBirth}} </p>
+                        </div>
+                        <div class="box">
+                            <p class="sex">Sex: {{user.isMan}}</p>
+                            <p class="address">Address: {{user.address}}</p>
+                            <p class="email">Email: {{user.email}}</p>
+                            <p class="phone">Phone: {{user.phone}}</p>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-danger button" (click)="onDelete(user.id)">X</button>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>

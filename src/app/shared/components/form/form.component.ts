@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { IBook } from 'src/app/books/interfaces/book.interfaces';
-import { Location } from '@angular/common';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { IBook } from 'src/app/books/interfaces/book.interface';
 import { Router } from '@angular/router';
 
 @Component({
@@ -24,13 +23,14 @@ export class FormComponent implements OnInit {
     private _router: Router
   ) { }
 
-  @Output() Saving = new EventEmitter()
+  @Output()
+  public savingEvent = new EventEmitter<any>();
 
   ngOnInit(): void {
   }
 
   public toSave(): void {
-    this.Saving.emit(this.book);
+    this.savingEvent.emit(this.book);
     this.goBack();
   }
 

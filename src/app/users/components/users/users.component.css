@@ -1,0 +1,16 @@
+.img{
+    max-width: 200px;
+}
+
+.mycard{
+    display: flex;
+}
+
+.box{
+    margin-left: 150px;
+}
+
+.button{
+    margin-bottom: auto;
+    margin-left: 0;
+}

@@ -1,10 +1,11 @@
 .books{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: red;
+    margin-top: 30px;
 }
 
 .book{
+    border-radius: 3px;
+    border: 1px solid rgb(136, 136, 136);
+    margin: 5px;
     display: flex;
     width: 95%;
     background-color: aqua;

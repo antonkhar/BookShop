@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IBook } from '../../interfaces/book.interfaces';
+import { IBook } from '../../interfaces/book.interface';
 import { EditorService } from '../../services/editor.service';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { IBook } from 'src/app/books/interfaces/book.interfaces';
+import { IBook } from 'src/app/books/interfaces/book.interface';
 import { books } from '../../services/mock-books';
 import { AddBooksService } from 'src/app/cart/services/add-books.service';
 import { EditorService } from '../../services/editor.service';

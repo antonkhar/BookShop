@@ -1,0 +1,25 @@
+<p>user-form works!</p>
+
+<form>
+    <fieldset [formGroup]="usersFormGroup">
+        <input formControlName="firstName">
+        <input formControlName="lastName">
+        <input formControlName="patronymic">
+        <input formControlName="isMan">
+        <input formControlName="characteristic">
+        <input formControlName="address">
+        <input formControlName="email">
+        <input formControlName="phone">
+    </fieldset>
+    <div *ngIf="usersFormGroup.controls['email'].invalid && usersFormGroup.controls['email'].touched">
+        <div>invalid email entered</div>
+    </div> 
+    <ng-template #elseBlock>Content to render when value is null.</ng-template>
+    <button
+        type="button" 
+        class="btn btn-primary" 
+        (click)="toSave()">
+        Save
+    </button>
+    <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+</form>

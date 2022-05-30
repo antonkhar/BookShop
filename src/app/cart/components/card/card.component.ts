@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IBook } from 'src/app/books/interfaces/book.interfaces';
+import { IBook } from 'src/app/books/interfaces/book.interface';
 import { AddBooksService } from '../../services/add-books.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class CardComponent implements OnInit {
   constructor(private _cartService: AddBooksService) { }
 
   ngOnInit(): void {
-    this.cart = this._cartService._CART;
+    this.cart = this._cartService.getCart();
   }
 
   public onDelite(id: number): void{
