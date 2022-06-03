@@ -7,7 +7,7 @@ import { EditUsersService } from '../../services/edit-users.service';
 @Component({
   selector: 'app-users-detail',
   templateUrl: './users-detail.component.html',
-  styleUrls: ['./users-detail.component.css']
+  styleUrls: ['./users-detail.component.scss']
 })
 export class UsersDetailComponent implements OnInit {
 

@@ -8,32 +8,32 @@
 <div class="books">
     <div *ngFor="let book of BOOKS;">
         <div class="cards">
-        <div class="card">
-            <div class="img">
-                <img [src]=book.img alt="">
-            </div>
-            <div class="buttons">
-                <button type="button" 
-                    class="button btn btn-outline-danger" 
-                    (click)="onDelete(book.id)">
-                    Delete
-                </button> 
-                <button type="button" 
-                    class="button btn btn-outline-success" 
-                    (click)="onBuy(book)">
-                    Buy
-                </button>
-            </div>
-            <div class="desc" [routerLink]="[book.id]">
-                <div class="info">
-                    <p class="name">{{book.name}} </p>
-                    <p class="author">{{book.author}} </p>
-                    <p class="year">{{book.yearIssue| date:'dd-M-yyyy'}} </p>
-                    <p class="description">{{book.description}} </p>
-                    <h3 class="price">{{book.price}} rub</h3>
+            <div class="card">
+                <div class="img">
+                    <img [src]=book.img alt="">
+                </div>
+                <div class="buttons">
+                    <button type="button" 
+                        class="button btn btn-outline-danger" 
+                        (click)="onDelete(book.id)">
+                        Delete
+                    </button> 
+                    <button type="button" 
+                        class="button btn btn-outline-success" 
+                        (click)="onBuy(book)">
+                        Buy
+                    </button>
+                </div>
+                <div class="desc" [routerLink]="[book.id]">
+                    <div class="info">
+                        <h2 class="name">{{book.name}} </h2>
+                        <p class="author">{{book.author}} </p>
+                        <!-- <p class="year">{{book.yearIssue.getFullYear()}} </p> -->
+                        <p class="description">{{book.description}}</p>
+                        <h2 class="price">{{book.price}} rub</h2>
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
     </div>
 </div>

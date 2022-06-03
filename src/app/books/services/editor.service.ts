@@ -7,8 +7,7 @@ import { BooksApiService } from './books-api.service';
 })
 export class EditorService {
 
-  constructor(private _books: BooksApiService) { 
-    this._books.getBooks()
+  constructor(private _books: BooksApiService) {
   }
 
   BOOKS: IBook[] = this._books.books;

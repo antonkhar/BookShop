@@ -8,7 +8,7 @@ import { BooksApiService } from '../../services/books-api.service';
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
-  styleUrls: ['./book-list.component.css']
+  styleUrls: ['./book-list.component.scss']
 })
 
 export class BookListComponent implements OnInit {
@@ -20,12 +20,14 @@ export class BookListComponent implements OnInit {
   constructor(
     private _editService: EditorService,
     private _cartService: AddBooksService,
-    private _http: HttpClient,
     private _booksApi: BooksApiService
-  ) { }
+  ) 
+  { 
+    this._booksApi.getBooks();
+  }
 
   ngOnInit(): void {
-    this._booksApi.getBooks()
+    // this._booksApi.getBooks();
   }
 
   public onDelete(id: number): void{

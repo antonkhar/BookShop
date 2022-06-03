@@ -1,6 +1,11 @@
 import { IApi } from "./api.interface";
 
-export interface IDataBooks {
-    book : IApi[]
-    meta: number[]
+export interface IBookResponse {
+    books : IApi[];
+    meta: {
+        limit: number;
+        page: number;
+        pages: number
+        records: number;
+    };
 }
