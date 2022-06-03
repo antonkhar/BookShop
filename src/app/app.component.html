@@ -1,0 +1,11 @@
+<div class="box">
+    <h1>{{ title }}</h1>
+    <div class="buttons">
+        <button class="btn btn-outline-info" (click)="openBooks()">Books</button>
+        <button class="btn btn-outline-info" (click)="openCart()">Cart</button>
+        <button class="btn btn-outline-info" (click)="openUsers()">Users</button>
+    </div>
+</div>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

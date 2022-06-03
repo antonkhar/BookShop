@@ -1,0 +1,19 @@
+.h2,h3{
+    margin: 0;
+}
+
+.box{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.buttons{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.content{
+    padding-left: 10px;
+    padding-right: 10px;
+}

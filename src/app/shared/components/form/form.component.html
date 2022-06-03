@@ -1,0 +1,9 @@
+
+<h2>Book name: </h2>
+<input class="name" [(ngModel)]="this.book.name" placeholder='book name'>
+<h2>Book description:</h2>
+<input class="id" [(ngModel)]="this.book.description" placeholder='book description'>
+<div class="buttons">
+    <button type="button" class="button btn btn-primary"(click)="toSave()">Save</button>
+    <button type="button" class="button btn btn-primary"(click)="goBack()">Go back</button>
+</div>

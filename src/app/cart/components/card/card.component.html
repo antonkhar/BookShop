@@ -1,0 +1,20 @@
+<h2>You cart</h2>
+
+<div>
+    <div class="books">
+        <div *ngFor="let book of cart">
+            <div class="book">
+                    <img [src]=book.img>
+                <div class="info">
+                    <h3>Name: {{book.name}}</h3>
+                    <p>Author: {{book.author}}</p>
+                    <p>Description: {{book.description}}</p>
+                    <p>Price: {{book.price}}</p>
+                </div>
+                <div class="button">
+                    <button type="button" class="btn btn-danger" (click)="onDelite(book.id)">X</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

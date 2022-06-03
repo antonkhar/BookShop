@@ -1,0 +1,75 @@
+<form>
+    <fieldset [formGroup]="usersFormGroup">
+        <div>
+            <div class="input">
+                <input formControlName="firstName">
+                <div class="error" [class.active]="usersFormGroup.controls['firstName'].invalid">
+                    Name cannot be shorter than 5 characters
+                </div>
+            </div >
+            <div class="input">
+                <input formControlName="lastName">
+                <div class="error">
+                    Error
+                </div>
+            </div>
+            <div class="input">
+                <input formControlName="patronymic">
+                <div class="error">
+                    Error
+                </div>
+            </div>
+            <div class="input">
+                <input formControlName="isMan">
+                <div class="error">
+                    Error
+                </div>
+            </div>
+            <div class="input">
+                <input formControlName="characteristic">
+                <div class="error">
+                    Error
+                </div>
+            </div>
+            <div class="input">
+                <input formControlName="address">
+                <div class="error">
+                    Error
+                </div>
+            </div>
+            <div class="input">
+                <input formControlName="email">
+                <div class="error" [class.active]="usersFormGroup.controls['email'].invalid">
+                    Please enter correct email
+                </div>
+            </div>
+            <div class="input">
+                <input formControlName="phone">
+                <div class="error">
+                    Error
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <div class="box">
+        <div 
+            *ngIf="usersFormGroup.controls['email'].valid && usersFormGroup.controls['firstName'].valid;
+            else templateName">
+            <button
+            type="button" 
+            class="btn btn-primary" 
+            (click)="toSave()">
+            Save
+            </button>
+        </div>
+        <ng-template #templateName>
+            <button disabled = 'true'
+            type="button" 
+            class="btn btn-primary" 
+            (click)="toSave()">
+            Save
+            </button>
+        </ng-template>
+        <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+    </div>
+</form>
