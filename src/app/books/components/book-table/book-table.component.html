@@ -1,0 +1,28 @@
+
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col" class="disable">Description</th>
+        <th scope="col">Author</th>
+        <th scope="col" class="disable">Year issue</th>
+        <th scope="col">Price (rub)</th>
+        <th scope="col" class="disable">Image</th>
+        <th scope="col" class="no_active active">Info</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of BOOKS">
+        <th scope="row" >{{book.id}}</th>
+        <td>{{book.name}}</td>
+        <td class="disable">{{book.description}}</td>
+        <td>{{book.author}} author</td>
+        <td class="disable">{{book.yearIssue | date: 'YYYY'}} year</td>
+        <td>{{book.price}}</td>
+        <td class="disable"><img src={{book.img}} class="img" alt="none"></td>
+        <td class="no_active active"> <a [routerLink]="[book.id]">More</a></td>
+      </tr>
+    </tbody>
+  </table>

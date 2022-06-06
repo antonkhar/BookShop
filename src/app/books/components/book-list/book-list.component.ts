@@ -2,7 +2,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { IBook } from 'src/app/books/interfaces/book.interface';
 import { AddBooksService } from 'src/app/cart/services/add-books.service';
 import { EditorService } from '../../services/editor.service';
-import { HttpClient } from '@angular/common/http';
 import { BooksApiService } from '../../services/books-api.service';
 
 @Component({
@@ -15,6 +14,8 @@ export class BookListComponent implements OnInit {
 
   @Output() addCard = new EventEmitter
 
+  public tableIsShow: boolean = false;
+
   public BOOKS: IBook[] = this._booksApi.books
 
   constructor(
@@ -22,12 +23,10 @@ export class BookListComponent implements OnInit {
     private _cartService: AddBooksService,
     private _booksApi: BooksApiService
   ) 
-  { 
-    this._booksApi.getBooks();
-  }
+  { }
 
   ngOnInit(): void {
-    // this._booksApi.getBooks();
+    this._booksApi.getBooks();
   }
 
   public onDelete(id: number): void{
@@ -42,6 +41,10 @@ export class BookListComponent implements OnInit {
   public onBuy(book: IBook): void{
     this._cartService.add(book);
     alert( "Book " + book.name + " added to cart" );
+  }
+
+  public showTable(): void{
+    this.tableIsShow = !this.tableIsShow
   }
 
 }

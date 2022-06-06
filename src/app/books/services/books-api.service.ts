@@ -30,6 +30,7 @@ export class BooksApiService {
     .subscribe((books: IApi[]) =>{
       this.books = this._convertApiBook.apiToBook(books);
       console.log(this.books)
-    })
+    });
+
   }
 }

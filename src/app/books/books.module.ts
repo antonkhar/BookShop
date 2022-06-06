@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BooksRoutingModule } from './books-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { AddBookComponent } from './components/add-book/add-book.component';
+import { BookTableComponent } from './components/book-table/book-table.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { AddBookComponent } from './components/add-book/add-book.component';
     BookListComponent,
     BookDetailComponent,
     AddBookComponent,
+    BookTableComponent,
   ],
   imports: [
     CommonModule,

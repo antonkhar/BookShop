@@ -1,16 +1,23 @@
 <h2>Books</h2>
-
-<div class="box">
-    <a routerLink="add" class="button_add">
-        <button class="btn btn-outline-warning">Add</button>
+    <a routerLink="add">
+        <button class="btn btn-outline-warning button">Add</button>
     </a >
-</div>
 <div class="books">
     <div *ngFor="let book of BOOKS;">
         <div class="cards">
             <div class="card">
-                <div class="img">
-                    <img [src]=book.img alt="">
+                <div class="container" [routerLink]="[book.id]">
+                    <div class="img">
+                        <img [src]=book.img alt="">
+                    </div>
+                    <div class="desc">
+                        <div class="info">
+                            <h2 class="price">{{book.price}} ₽</h2>
+                            <p class="name">{{book.name}} </p>
+                            <p class="author">{{book.author}} </p>
+                            <p class="year">{{book.yearIssue}} </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="buttons">
                     <button type="button" 
@@ -24,16 +31,9 @@
                         Buy
                     </button>
                 </div>
-                <div class="desc" [routerLink]="[book.id]">
-                    <div class="info">
-                        <h2 class="name">{{book.name}} </h2>
-                        <p class="author">{{book.author}} </p>
-                        <!-- <p class="year">{{book.yearIssue.getFullYear()}} </p> -->
-                        <p class="description">{{book.description}}</p>
-                        <h2 class="price">{{book.price}} rub</h2>
-                    </div>
-                </div>
             </div>
         </div>
+        </div>
     </div>
-</div>
+<button type="button" (click)="showTable()" class="btn btn-outline-info">Table books</button>
+<app-book-table [class.disable]="tableIsShow == false"></app-book-table>

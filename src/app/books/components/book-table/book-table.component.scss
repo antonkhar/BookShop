@@ -1,0 +1,26 @@
+@media (max-width: 800px){
+    .disable{
+        display: none;
+    }
+
+    .active{
+        display: block;
+    }
+}
+
+@media (min-width: 801px){
+
+    .no_active{
+        display: none;
+    }
+}
+
+td{
+    max-width: 150px;
+}
+
+.img{
+    max-width: 150px;
+
+}
+
