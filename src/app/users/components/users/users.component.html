@@ -4,18 +4,18 @@
         <div class="cards">
         <div class="card" style="display: flex;">
             <div class="mycard">
-                <div class="img">
+                <div class="img disable">
                     <img src={{user.photo}} class="img-fluid" alt="">
                 </div>
                 <div class="desc" [routerLink]="[user.id]">
                     <div class="info mycard">
-                        <div class="box">
+                        <div class="box mini">
                             <p class="first name">First name: {{user.firstName}} </p>
                             <p class="last name">Last name: {{user.lastName}} </p>
                             <p class="patronymic">Patronymic: {{user.patronymic}} </p>
                             <p class="date of birth">Date of birth: {{user.dateOfBirth | date:'dd-M-yyyy'}} </p>
                         </div>
-                        <div class="box">
+                        <div class="box mini">
                             <p class="sex">Sex: {{user.isMan}}</p>
                             <p class="address">Address: {{user.address}}</p>
                             <p class="email">Email: {{user.email}}</p>

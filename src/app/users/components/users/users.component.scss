@@ -1,3 +1,20 @@
+@media (max-width: 800px){
+    .disable{
+        display: none;
+    }
+
+    .mini{
+        margin-left: 50px;
+    }
+}
+
+@media (min-width: 801px){
+
+    .box{
+        margin-left: 150px;
+    }
+}
+
 .img{
     max-width: 200px;
 }
@@ -6,11 +23,11 @@
     display: flex;
 }
 
-.box{
-    margin-left: 150px;
-}
-
 .button{
     margin-bottom: auto;
     margin-left: 0;
+}
+
+.card{
+    margin-top: 10px;
 }
