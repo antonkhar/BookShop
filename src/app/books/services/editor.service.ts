@@ -10,19 +10,18 @@ export class EditorService {
   constructor(private _books: BooksApiService) {
   }
 
-  BOOKS: IBook[] = this._books.books;
+  public BOOKS: IBook[] = [] ;
 
   getBook(id: number){
     return this.BOOKS.find(h => h.id === id)
   }
 
-  revriteBook(book: IBook, id: number){ 
-    const found = this.BOOKS.findIndex(h => h.id === id);
-    this.BOOKS[found] = book;
+  revriteBook(book: IBook){ 
+    return this._books.updateBook(book);
   }
 
   pushBook(book: IBook){
-    this.BOOKS.push(book)
+    this._books.addBook(book);
   }
 
 }

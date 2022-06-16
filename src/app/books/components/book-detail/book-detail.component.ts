@@ -24,7 +24,10 @@ export class BookDetailComponent implements OnInit {
 
   public revriteBook(book: IBook): void {
     const id = Number(this._route.snapshot.paramMap.get('id'));
-    this._editorService.revriteBook(book, id)
+    this._editorService.revriteBook(book).subscribe((data) => {
+      console.log(data);
+      
+    });
   }
   
   public getBook(): void {
